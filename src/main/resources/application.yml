@@ -1,0 +1,24 @@
+---
+spring:
+  profiles: prod
+server:
+  port: 8081
+---
+spring:
+  profiles: test
+server:
+  port: 8082
+---
+spring:
+  profiles:
+    active: dev
+server:
+  port: 8083
+logging:
+  file:
+    path: C:/MVCPATTERN-2
+  #  level:
+#    root: DEBUG
+  pattern:
+    file: '%d %p %c{1.} [%t] %m%n'
+    console: '%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n'
